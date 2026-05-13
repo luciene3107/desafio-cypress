@@ -1,0 +1,32 @@
+{
+  "name": "desafio-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/luciene3107/desafio-cypress#readme",
+  "bugs": {
+    "url": "https://github.com/luciene3107/desafio-cypress/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciene3107/desafio-cypress.git"
+  },
+  "license": "ISC",
+  "author": "Luciene Borges",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cypress": "^15.14.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/step-definitions/"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "cypress": "^15.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
