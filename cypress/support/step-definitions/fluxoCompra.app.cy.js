@@ -1,10 +1,10 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
-import fluxoCompraPage from "../pages/fluxoCompra.page";
-import addCartPage from "../pages/addCart.page";
-import shoppingCartPage from "../pages/shoppingCart.page";
-import viewCartPage from "../pages/viewCart.page";
-import paymentPage from "../pages/payment.page";
-import successOrderPage from "../pages/successOrder.page";
+const { And, Then } = require("cypress-cucumber-preprocessor/steps");
+const fluxoCompraPage = require("../pages/fluxoCompra.page");
+const addCartPage = require("../pages/addCart.page");
+const shoppingCartPage = require("../pages/shoppingCart.page");
+const viewCartPage = require("../pages/viewCart.page");
+const paymentPage = require("../pages/payment.page");
+const successOrderPage = require("../pages/successOrder.page");
 
 And('visualizo os detalhes do produto Men Tshirt', () => {
     fluxoCompraPage.fluxoCompra()

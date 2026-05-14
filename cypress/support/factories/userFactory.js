@@ -1,7 +1,7 @@
 //import { faker } from '@faker-js/faker';
 const { faker } = require('@faker-js/faker');
 
-export default {
+module.exports = {
   gerarDadosDeUsuario: () => {
     return {
       firstName: faker.person.firstName(),

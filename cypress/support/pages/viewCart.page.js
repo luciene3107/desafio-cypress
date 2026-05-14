@@ -6,4 +6,4 @@ class viewCart{
     }
 }
 
-export default new viewCart()
+module.exports = new viewCart()

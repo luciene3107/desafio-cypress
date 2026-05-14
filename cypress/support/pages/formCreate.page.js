@@ -4,11 +4,11 @@ const BOTAO_SIGNUP = '[data-qa="signup-button"]'
 
 class formulario{
     preencherFormulario(){
-        cy.get(NOME_INPUT).type('Lila');
-        cy.get(EMAIL_INPUT).type('lila10@teste.com');
-        cy.get(BOTAO_SIGNUP).click()
+        cy.task('gerarDadosSignup').then((usuario) => {
+            cy.get(NOME_INPUT).type(usuario.nome);
+            cy.get(EMAIL_INPUT).type(usuario.email);
+            cy.get(BOTAO_SIGNUP).click()
+        });
     }
 }
-export default new formulario() 
-
-
+module.exports = new formulario() 

@@ -6,4 +6,4 @@ class portal{
     }
 }
 
-export default new portal()
+module.exports = new portal()

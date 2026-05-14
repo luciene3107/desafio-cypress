@@ -9,4 +9,4 @@ class sucessOrder {
         cy.get(LOGOUT).click();
     }
 }
-export default new sucessOrder()
+module.exports = new sucessOrder()

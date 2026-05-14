@@ -15,4 +15,4 @@ class shoppingCart{
     }
 }
 
-export default new shoppingCart()
+module.exports = new shoppingCart()

@@ -8,15 +8,17 @@ const BTN_PAYMENT = '[data-qa = pay-button]'
 
 class payment{
     payment(){
-        cy.get(PAYMENT).should('be.visible').contains('Payment')
-        cy.get(NAME_CARD).should('be.visible').type('Luciene')
-        cy.get(NUMBER_CARD).should('be.visible').type('123456789')
-        cy.get(CVC).should('be.visible').type('159')
-        cy.get(EXPIRY_MONTH).should('be.visible').type('12')
-        cy.get(EXPIRY_YEAR).should('be.visible').type('2027')
-        cy.get(BTN_PAYMENT).should('be.visible').click()
+        cy.task('recuperaDadosSignup').then((usuario) => {
+            cy.get(PAYMENT).should('be.visible').contains('Payment')            
+            cy.get(NAME_CARD).should('be.visible').type(usuario.creditCardName)
+            cy.get(NUMBER_CARD).should('be.visible').type(usuario.numberCard);
+            cy.get(CVC).should('be.visible').type(usuario.cvc)
+            cy.get(EXPIRY_MONTH).should('be.visible').type(usuario.expiryMonth);
+            cy.get(EXPIRY_YEAR).should('be.visible').type(usuario.expiryYear);
+            cy.get(BTN_PAYMENT).should('be.visible').click()
+        });       
               
     }
 }
 
-export default new payment()
+module.exports = new payment()

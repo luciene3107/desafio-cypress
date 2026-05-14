@@ -9,4 +9,4 @@ class validacaoAccount {
         cy.get(LOGOUT).click()
     }
 }
-export default new validacaoAccount()
+module.exports = new validacaoAccount()

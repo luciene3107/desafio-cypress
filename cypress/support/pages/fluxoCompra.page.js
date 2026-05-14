@@ -9,7 +9,7 @@ class fluxoCompraPage {
     }
 
 }
-export default new fluxoCompraPage()
+module.exports = new fluxoCompraPage()
 
 
 

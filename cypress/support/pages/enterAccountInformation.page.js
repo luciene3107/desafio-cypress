@@ -4,10 +4,15 @@ const PASSWORD = '[data-qa="password"]';
 
 class enterAccountInformation {
     enterAccountInformation() {
-        cy.get(TITLE).check().should('be.checked');
-        cy.get(PASSWORD).type('12345');        
+         cy.task('recuperaDadosSignup').then((usuario) => {           
+            cy.get(TITLE).check().should('be.checked');
+            cy.get(PASSWORD).type(usuario.password);            
+        });
+
+       
+           
     }
 
 }
 
-export default new enterAccountInformation()
+module.exports = new enterAccountInformation()

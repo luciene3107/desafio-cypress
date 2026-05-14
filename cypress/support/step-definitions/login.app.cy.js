@@ -1,5 +1,5 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import loginPage from "../pages/login.page";
+const { And } = require("cypress-cucumber-preprocessor/steps");
+const loginPage = require("../pages/login.page");
 
 And('preencher email e senha e clicar no botão Login', () => {
    loginPage.login()

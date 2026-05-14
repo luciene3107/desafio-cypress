@@ -10,4 +10,4 @@ class addProduct{
     }
 }
 
-export default new addProduct()
+module.exports = new addProduct()
