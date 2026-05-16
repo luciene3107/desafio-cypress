@@ -1,10 +1,15 @@
 const { And, Then } = require("cypress-cucumber-preprocessor/steps");
+const loginPage = require("../pages/login.page");
 const fluxoCompraPage = require("../pages/fluxoCompra.page");
 const addCartPage = require("../pages/addCart.page");
 const shoppingCartPage = require("../pages/shoppingCart.page");
 const viewCartPage = require("../pages/viewCart.page");
 const paymentPage = require("../pages/payment.page");
 const successOrderPage = require("../pages/successOrder.page");
+
+And('realizo login com o usuário cadastrado', () => {
+   loginPage.login()
+})
 
 And('visualizo os detalhes do produto Men Tshirt', () => {
     fluxoCompraPage.fluxoCompra()
@@ -29,3 +34,4 @@ And('adiciono o numero do cartão e clico no botão Pay and Confirm Order', () =
 Then('valido que o pedido foi realizado com sucesso', () => {
     successOrderPage.sucessOrder()
 })
+

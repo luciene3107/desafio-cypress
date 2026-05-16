@@ -1,4 +1,3 @@
-//const VIEW_PRODUCT = 'a > .nav.nav-pills.nav-justified:eq(0)'
 
 
 class fluxoCompraPage {

@@ -1,19 +1,19 @@
 #utf-8
 #language: pt
 
-Funcionalidade: Cadastrar novo usuario
-    Cenário: Cadastrar novo usuario
-        Dado que acessei o portal Automation Exercise
+Funcionalidade: Cadastrar novo usuário
+    Cenário: Cadastrar novo usuário
+        Dado que acesso o portal Automation Exercise
         Quando clicar no link Signup
         E preencher nome e email e clicar no botão Signup
         E preencher Enter Account Information
-        E preencher Address Information e clicarno botão Create Account
+        E preencher Address Information e clicar no botão Create Account
         Então valido que o cadastro foi realizado com sucesso
 
     Cenário: Fluxo de Compra
-        Dado que acessei o portal Automation Exercise
+        Dado que acesso o portal Automation Exercise
         Quando clicar no link Signup
-        E preencher email e senha e clicar no botão Login
+        E realizo login com o usuário cadastrado
         E visualizo os detalhes do produto Men Tshirt
         E adiciono o produto no carrinho
         E clico no link do carrinho
